@@ -1,0 +1,27 @@
+<!-- <p>{{teams.length}}</p> -->
+<article *ngFor="let team of teams" class="team">
+    <img [src]="team.strTeamBadge" alt="strTeamBadge" >
+    <div class="team-detail">
+        <h3 >{{team.strTeam}}</h3>
+        <p >Formado en <strong>{{team.intFormedYear}}</strong></p>
+        <p >Pais <strong>{{team.strCountry}}</strong></p>
+        <p class="team-description">{{team.strDescriptionEN |slice:0:100}} ...</p>
+        <p *ngIf="team.strDescriptionES" class="team-description">Español: {{team.strDescriptionES}}</p>
+        <a class="team-url" [routerLink]="['./', team.strTeam]" >Detalle</a>
+    </div>
+    <div class="social">
+        <a *ngIf="team.strFacebook" class="social-link facebook" href="https://{{team.strFacebook}}" target="_blank"></a>
+        <a *ngIf="team.strTwitter" class="social-link twitter" href="https://{{team.strTwitter}}" target="_blank"></a>
+        <a *ngIf="team.strInstagram" class="social-link instagram" href="https://{{team.strInstagram}}" target="_blank"></a>
+        <a *ngIf="team.strWebsite" class="social-link web" href="https://{{team.strWebsite}}" target="_blank"></a>
+        <a *ngIf="team.strYoutube" class="social-link youtube" href="https://{{team.strYoutube}}" target="_blank"></a>
+    </div>
+    <!-- <img [src]="team.strTeamBanner" alt="strTeamBanner" >
+    <img [src]="team.strTeamFanart1" alt="strTeamFanart1" >
+    <img [src]="team.strTeamFanart2" alt="strTeamFanart2" >
+    <img [src]="team.strTeamFanart3" alt="strTeamFanart3" >
+    <img [src]="team.strTeamFanart4" alt="strTeamFanart4" >
+    <img [src]="team.strTeamJersey" alt="strTeamJersey" >
+    <img [src]="team.strTeamLogo" alt="strTeamLogo" > -->
+</article>
+

@@ -1,0 +1,5 @@
+<section class="team-list" *ngIf="($teams | async) as teams">
+    <h2 class="team-list-title">Equipos {{teams[0]?.strLeague}}</h2>
+    <hr>
+    <app-team [teams]="teams" class="teamContainer"></app-team>
+</section>

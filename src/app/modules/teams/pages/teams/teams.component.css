@@ -1,0 +1,12 @@
+
+
+.team-list-title {
+  margin-left: 20px;
+}
+
+.teamContainer {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  /* border: 1px solid blue; */
+}
